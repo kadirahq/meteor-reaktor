@@ -13,17 +13,8 @@ Package.onUse(function(api) {
 });
 
 Package.onTest(function(api) {
-  api.addFiles('test/init.jsx', 'server');
-  configure(api);
-  api.use('react');
-  api.use('tinytest');
-  api.use('random');
 
-  api.addFiles('test/fakescript.js', 'client', {isAsset: true});
-  api.addFiles('test/client.jsx', 'client');
-  api.addFiles('test/server.jsx', 'server');
 });
-
 
 function configure(api) {
   api.use('react@0.1.4');
