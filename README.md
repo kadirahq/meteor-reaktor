@@ -23,9 +23,9 @@ Behind the schenes, it uses [FlowRouter](https://github.com/kadirahq/flow-router
 First add [FlowRouter 2.0](https://github.com/kadirahq/meteor-react-layout) or [FlowRouter SSR](https://github.com/kadirahq/flow-router/tree/ssr) into your app:
 
 ~~~
-meteor add kadria:flow-router
+meteor add kadira:flow-router
 // or
-meteor add kadria:flow-router-ssr
+meteor add kadira:flow-router-ssr
 ~~~
 
 Then add Reaktor
