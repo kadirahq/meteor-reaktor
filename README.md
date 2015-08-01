@@ -3,7 +3,7 @@
 
 Easy to use React Frontend for [FlowRouter](https://github.com/kadirahq/flow-router)
 
-With Reacktor you can write route like this:
+With Reacktor you can write routes like this:
 
 ~~~jsx
   Reaktor.init(
@@ -41,21 +41,25 @@ Let's say we've two React components like this:
 ~~~jsx
 BlogList = React.createClass({
   render() {
-    return <div>
-      This is the blog list:
-      <ul>
-        <li><a href="/blog/hello-post">Hello Post</a></li>
-      </ul>
-    </div>;
+    return (
+      <div>
+        This is the blog list:
+        <ul>
+          <li><a href="/blog/hello-post">Hello Post</a></li>
+        </ul>
+      </div>
+    );
   }
 });
 
 BlogPost = React.createClass({
   render() {
-    return <div>
-      <p><a href="/">Back</a></p>
-      This is the blog post
-    </div>;
+    return (
+      <div>
+        <p><a href="/">Back</a></p>
+        This is the blog post
+      </div>
+    );
   }
 });
 ~~~
@@ -65,10 +69,12 @@ Then, here's the layout:
 ~~~jsx
 Layout = React.createClass({
   render() {
-    return <div>
-      <h1>My Blog </h1>
-      {this.props.content}
-    </div>;
+    return (
+      <div>
+        <h1>My Blog </h1>
+        {this.props.content}
+      </div>
+    );
   }
 });
 ~~~
