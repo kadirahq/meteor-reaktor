@@ -17,6 +17,7 @@ Package.onTest(function(api) {
 });
 
 function configure(api) {
+  api.use('underscore@1.0.3');
   api.use('react@0.1.4');
   api.use('kadira:flow-router@2.0.0', ['client', 'server'], {weak: true});
   api.use('kadira:flow-router-ssr@3.0.0', ['client', 'server'], {weak: true});
