@@ -4,12 +4,19 @@ if(Package['kadira:flow-router']) {
 } else if(Package['kadira:flow-router-ssr']) {
   FlowRouter = Package['kadira:flow-router-ssr'].FlowRouter
 } else {
-  throw new Error("Reaktor needs FlowRouter 2.0 or SSR version");
+  throw new Error("Reaktor needs FlowRouter 2.0 or the SSR version");
 }
 
 Reaktor = {
   init: function(el) {
-    React.renderToString(el);
+    if(Meteor.isClient) {
+      // Here we just need to render it.
+      // No need to display the output.
+      var dom = $('<div></div>');
+      ReactDOM.render(el, dom.get(0));
+    } else {
+      ReactDOMServer.renderToString(el);
+    }
   }
 };
 
