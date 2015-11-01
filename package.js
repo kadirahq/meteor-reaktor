@@ -1,7 +1,7 @@
 Package.describe({
   name: 'kadira:reaktor',
   summary: 'Easy to use React Frontend for FlowRouter',
-  version: '1.0.1',
+  version: '1.2.0',
   git: 'https://github.com/kadirahq/meteor-reaktor.git'
 });
 
